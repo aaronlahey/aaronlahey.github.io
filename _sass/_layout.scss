@@ -1,15 +1,15 @@
 .site-header {
-  min-height: 112px;
+  min-height: 168px;
 }
 
 .gtr {
   width: 56px;
   height: auto;
-  padding: 28px 28px 28px 0;
+  padding: 56px 28px 28px 0;
 }
 
 .site-title {
-  line-height: 112px;
+  line-height: 168px;
   font-size: 26px;
   float: left;
 
@@ -21,7 +21,7 @@
 
 .site-nav {
   float: right;
-  line-height: 112px;
+  line-height: 168px;
 
   .page-link {
     color: $text-color;
@@ -108,7 +108,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0 0 $spacing-unit 0;
 }
 
 .page-heading {
