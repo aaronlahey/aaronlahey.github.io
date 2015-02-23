@@ -8,6 +8,16 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+hr {
+  margin-top: 56px;
+}
+
+sup {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: $grey-color-dark;
+}
+
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -71,7 +81,7 @@ blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: -1px;
   font-style: italic;
 
@@ -82,7 +92,7 @@ blockquote {
 
 pre, code {
   font-family: "Inconsolata", monospace;
-  font-size: 15px;
+  font-size: 14px;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   line-height: 1.5;
