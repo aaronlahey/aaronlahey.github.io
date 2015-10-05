@@ -16,19 +16,36 @@ Selection sort is an elementary sorting algorithm. It's simple to implement and 
 ...we would start at index `0` and assume that `5` is the smallest value. After observing index `1` we would then see `3` is now the smallest value. `1` would remain the index with the smallest value until we observed index `4` and arrive at the end of the array. At this point, we would swap index `0` with index `4`. The following array would result...
 
 {% highlight ruby %}
-[1, 3, 8, 9, 5]
+[5, 3, 8, 9, 1] #=> [1, 3, 8, 9, 5]
+ ^           ^
 {% endhighlight %}
 
-Now, we'll move to index `1` and repeat the same process of observing all following elements, remembering that index, and swapping it with `1`. In this case, index `1` *is* the smallest so we'll swap `1` with `1` and move to the next index. After observing indicies `2`, `3`, and `4` we would notice `4` is the smallest and swap `2` and `4`...
+Now, we'll move to index `1` and repeat the same process of observing all following elements, remembering that index, and swapping it with `1`. In this case, index `1` *is* the smallest so we'll swap `1` with `1` and move on...
 
 {% highlight ruby %}
-[1, 3, 5, 9, 8]
+[1, 3, 8, 9, 5] #=> [1, 3, 8, 9, 5]
+    ^
 {% endhighlight %}
 
-Finally, we would compare `3` and `4`, swap them, and end up with a sorted array...
+Next, starting on index `2` and observing indicies `3` and `4`, we would notice `4` is the smallest and swap `2` and `4`...
 
 {% highlight ruby %}
-[1, 3, 5, 8, 9]
+[1, 2, 8, 9, 5] #=> [1, 3, 5, 9, 8]
+       ^     ^
+{% endhighlight %}
+
+Next, starting on index `3`, we would compare that value to the value at `4` and swap them...
+
+{% highlight ruby %}
+[1, 3, 5, 9, 8] #=> [1, 3, 5, 8, 9]
+          ^  ^
+{% endhighlight %}
+
+Finally, because index `4` is the last (and consequently the smallest), we swap index `4` with itself and end up with a sorted array...
+
+{% highlight ruby %}
+[1, 3, 5, 8, 9] #=> [1, 3, 5, 8, 9]
+             ^
 {% endhighlight %}
 
 Thinking about the performance characteristics of selection sort we can see that in every case, regardless of whether the array is pre-sorted or not, we will perform `O(n)` swaps and `(On^2)/2`. If we were to observe every element in the array *for* every element in the array we would perform `5 * 5` or `5^2` elements. However, we do not observe elements that are already assumed to be in sorted order.
