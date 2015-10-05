@@ -7,7 +7,7 @@ categories: algorithms
 
 Having majored in music instead of computer science, my knowledge of algorithms and data structures is an area that's ripe for improvement. Over the next few blog posts I'll describe a series of different algorithms and data structures, their implementation, their performance characteristics, and some of their possible uses.
 
-Selection sort an elementary sorting algorithms. It's simple to implement and serves as a great introduction to sorting algorithm implementations. Starting from the beginning of the array, it scans each element, keeping track of the smallest one. After locating the index of the smallest element, it swaps the first element and the smallest element. Then, it moves to the second index and repeats the same process again. For this array...
+Selection sort is an elementary sorting algorithm. It's simple to implement and serves as a great introduction to sorting algorithm implementations. Starting from the beginning of the array it scans each element keeping track of the smallest one. After locating the index of the smallest element, it swaps the first element and the smallest element. Then, it moves to the second index and repeats the same process again. For this array...
 
 {% highlight ruby %}
 [5, 3, 8, 9, 1]
@@ -33,7 +33,7 @@ Finally, we would compare `3` and `4`, swap them, and end up with a sorted array
 
 Thinking about the performance characteristics of selection sort we can see that in every case, regardless of whether the array is pre-sorted or not, we will perform `O(n)` swaps and `(On^2)/2`. If we were to observe every element in the array *for* every element in the array we would perform `5 * 5` or `5^2` elements. However, we do not observe elements that are already assumed to be in sorted order.
 
-Sorting algorithms in Java utilize the `Comparable<T>` interface. Implementations of this interface define what it means to compare one object of type `T` to another of the same type. When the receiver is deemed to be "less than" the argument the method should return `-1`, if they are the same, `0`, and if greater than, `1`...
+Sorting algorithms in Java utilize the `Comparable<T>` interface. Implementations of this interface define what it means to compare themselves to an object of type `T`. When the receiver is deemed to be "less than" the argument the method should return `-1`, if they are the same, `0`, and if greater than, `1`...
 
 {% highlight java linenos %}
 Integer x = 42;
@@ -58,21 +58,21 @@ public class SelectionSort<T extends Comparable<T>> {
 
             // start at our current index and look for the smallest element
             for(int j = i; j < length; j++) {
+                // when the current element is smaller than the known smallest element...
                 if(isLessThan(elements, j, min)) {
-                    // keep track of the current element when its smaller
-                    // than our known smallest element.
+                    // then remember that element as the smallest
                     min = j;
                 }
             }
 
-	         // after observing every element, swap the current element and
-	         // the known smallest element.
+            // after observing every element, swap the current element and
+            // the known smallest element.
             swap(elements, min, i);
         }
     }
 
-    private boolean isLessThan(T[] elements, int a, int b) {
-        return elements[a].compareTo(elements[b]) < 0;
+    private boolean isLessThan(T[] elements, int i, int j) {
+        return elements[i].compareTo(elements[j]) < 0;
     }
 
     private void swap(T[] elements, int i, int j) {
