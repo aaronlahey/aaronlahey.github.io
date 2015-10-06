@@ -5,7 +5,7 @@ date:   2015-10-05
 categories: algorithms
 ---
 
-In my [previous post](http://blog.aaronlahey.com/algorithms/2015/10/04/selection-sort.html) I gave a brief introduction to the selection sort algorithm. Today, I'd like to look at another elementary sorting algorithm called insertion sort. Insertion sort is interesting because the performance characteristics of the algorithm directly depend on the state of the input. In the best case, when given pre-sorted input, the algorithm performs `O(n)` compares. However, in the worst case, when the input is in reverse-sorted order, it performs `O(n^2)/2` compares and swaps.
+In my [previous post](http://blog.aaronlahey.com/algorithms/2015/10/04/selection-sort.html) I gave a brief introduction to the selection sort algorithm. Today, I'd like to look at another elementary sorting algorithm called insertion sort. Insertion sort is interesting because the performance characteristics of the algorithm directly depend on the state of the input. In the best case, when given pre-sorted input, the algorithm performs `N-1` compares and `0` swaps. However, in the worst case, when the input is in reverse-sorted order, it performs `N^2/2` compares and `N^2/2` swaps.
 
 Insertion sort starts at the first index in the array and progresses to the last index in the array. If the current element is less than the element directly to its left they are swapped. This process is repeated until the element to its left is less than the current element. After the element has been moved into sorted order, all elements before our current element are guaranteed to be in sorted order and we can move on to the next. Consider the following example...
 
@@ -73,7 +73,7 @@ public class InsertionSort<T extends Comparable<T>> {
             }
         }
     }
-    
+
     private boolean isLessThan(T[] elements, int i, int j) {
         return elements[i].compareTo(elements[j]) < 0;
     }

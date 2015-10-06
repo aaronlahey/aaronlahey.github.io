@@ -48,7 +48,7 @@ Finally, because index `4` is the last (and consequently the smallest), we swap 
              ^
 {% endhighlight %}
 
-Thinking about the performance characteristics of selection sort we can see that in every case, regardless of whether the array is pre-sorted or not, we will perform `O(n)` swaps and `(On^2)/2`. If we were to observe every element in the array *for* every element in the array we would perform `5 * 5` or `5^2` elements. However, we do not observe elements that are already assumed to be in sorted order.
+Thinking about the performance characteristics of selection sort we can see that in every case, regardless of whether the array is pre-sorted or not, we will perform `N` swaps and `N^2/2`. If we were to observe every element in the array *for* every element in the array we would perform `5 * 5` or `5^2` elements. However, we do not observe elements that are already assumed to be in sorted order.
 
 Sorting algorithms in Java utilize the `Comparable<T>` interface. Implementations of this interface define what it means to compare themselves to an object of type `T`. When the receiver is deemed to be "less than" the argument the method should return `-1`, if they are the same, `0`, and if greater than, `1`...
 
