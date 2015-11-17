@@ -43,8 +43,10 @@ The merge operation is fundamental to this algorithm. For this operation to func
 public void merge(T[] elements, T[] aux, int lo, int mid, int hi) {
     // First, copy the elements from the array being sorted into an
     // auxiliary array. We use System.arraycopy instead of a manual
-    // for loop for performance reasons.
-    System.arraycopy(elements, 0, aux, 0, elements.length);
+    // for loop for performance reasons. We also only need to copy
+    // from the `lo` index up to the number of elements in the subarray.
+    // This can be calculated by using hi - lo + 1.
+    System.arraycopy(elements, lo, aux, lo, hi - lo + 1);
 
     // The start of the first source array is the start of the
     // auxiliary array.
@@ -56,8 +58,10 @@ public void merge(T[] elements, T[] aux, int lo, int mid, int hi) {
 
     // The auxiliary array is the exact same size as the destination
     // array so we can iterate over every value of `k` and know it
-    // will include every value of `i` and `j`.
-    for(int k = lo; k < elements.length; k++) {
+    // will include every value of `i` and `j`. We need to iterate
+    // while `k` is less than or equal to `hi` because `hi` is the last
+    // index of the current array, not the length.
+    for(int k = lo; k <= hi; k++) {
 
         // Here we check to see if we've consumed every value from
         // the first array. We know we have when the current index
@@ -173,11 +177,11 @@ public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
     }
 
     public void merge(T[] elements, T[] aux, int lo, int mid, int hi) {
-        System.arraycopy(elements, 0, aux, 0, elements.length);
+        System.arraycopy(elements, lo, aux, lo, hi - lo + 1);
 
         int i = lo;
         int j = mid + 1;
-        for(int k = lo; k < elements.length; k++) {
+        for(int k = lo; k <= hi; k++) {
             if(i > mid) {
                 elements[k] = aux[j++];
             } else if(j > hi) {
