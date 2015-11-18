@@ -74,8 +74,8 @@ public void merge(T[] elements, T[] aux, int lo, int mid, int hi) {
 
         // Here we check to see if we've consumed every value from
         // the second array. We know we have when the current index
-        // of `j` is higher than than `hi`. `hi` in this case will
-        // be `elements.length - 1`.
+        // of `j` is higher than than `hi`. `hi` in this case will be
+        // the last index of the current subarray.
         } else if(j > hi) {
             // If we have consumed every value from the second array
             // we can continually pull from the first array and
