@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Cumulative Effect of Inefficient Workflows"
-date:   2014-11-29
+title: "The Cumulative Effect of Inefficient Workflows"
+date: 2014-11-29
 categories: workflows
 ---
 

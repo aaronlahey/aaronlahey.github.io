@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Merge Sort"
-date:   2015-11-06
+title: "Merge Sort"
+date: 2015-11-06
 categories: algorithms
 ---
 

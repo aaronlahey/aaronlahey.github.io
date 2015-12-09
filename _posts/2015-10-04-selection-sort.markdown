@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Selection Sort"
-date:   2015-10-04
+title: "Selection Sort"
+date: 2015-10-04
 categories: algorithms
 ---
 

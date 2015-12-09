@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Insertion Sort"
-date:   2015-10-05
+title: "Insertion Sort"
+date: 2015-10-05
 categories: algorithms
 ---
 
