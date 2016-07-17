@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "The Relationship Between Functions, Symbols, Vars, and Namespaces"
-authors: ["aaron-lahey"]
-date: 2016-07-20
-tags: ["Coding", "Tools"]
+date: 2016-07-17
+categories: clojure
 ---
 
 Welcome! Often times when working with Clojure newcomers I sense a bit of confusion around the relationship between functions, symbols, vars, and namespaces. Typically the developer has a working knowledge of how to require other namespaces or refer functions, but they haven't quite grasped how all the pieces fit together allowing them to execute the expressions they're writing. Also, although we typically refer to functions using the names of the symbols to which they're aliased, I get the feeling beginners do it out of a general lack of understanding of these topics instead of as a sort of shorthand in everyday conversation. In this blog post I'd like to explore what exactly these four things are, how they work together, some useful functions for interacting with them, and how we can use our newfound knowledge to build tools that reflect on or modify the state of the runtime.

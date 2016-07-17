@@ -6,4 +6,4 @@ twitter_username: aaronlahey
 github_username:  aaronlahey
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
