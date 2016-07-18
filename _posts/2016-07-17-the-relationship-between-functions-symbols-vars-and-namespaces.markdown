@@ -15,7 +15,7 @@ Internally, the language represents functions as any Java class that implements 
 
 To help alleviate this problem, Clojure ships with the abstract base class <a href="https://github.com/clojure/clojure/blob/master/src/jvm/clojure/lang/AFn.java" target="_blank">`clojure.lang.AFn`</a>. This class provides a default implementation of `applyTo` and implements all `invoke` overloads to throw a <a href="https://github.com/clojure/clojure/blob/master/src/jvm/clojure/lang/ArityException.java" target="_blank">`clojure.lang.ArityException`</a>. In fact, you've probably seen this default implementation at work and didn't even realize it!
 
-```Clojure
+```clojure
 (ns example.core)
 
 (defn add
