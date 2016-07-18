@@ -6,4 +6,7 @@ twitter_username: aaronlahey
 github_username:  aaronlahey
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
+
+kramdown:
+  input: GFM
