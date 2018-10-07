@@ -13,7 +13,7 @@ As software craftspeople, we’re equally affected by this same cumulative effec
 
 It seems logical that we wouldn’t. The companies we work for and the consumers of our products don’t care how we develop as long as the things we deliver are on time, on budget, and meet or exceed any quality expectations. However, as *producers*, we should always be focused on whether the *act of producing* is as efficient as it could be.
 
-##The Seemingly Insignificant
+## The Seemingly Insignificant
 
 It wasn’t until I started working with other developers that I really started thinking about inefficiencies in development workflows. I remember the first moment it popped into my head… I was pair programming with a colleague and the code we were working on lived near the bottom of the file. I don’t remember exactly why I needed to jump to the top of the file (I probably needed to `require` something), but I proceeded to type: `shift, colon, one, enter`. I’m sure my pair grit his teeth a little, but didn't say anything. I did my business at the top of the file, and to get back to the bottom I typed `shift, colon, nine, nine, nine, nine, enter`. That was obviously too much for him to bear, so he promptly chuckled and informed me that I could get to the bottom of a file simply by typing `G`.
 
@@ -25,7 +25,7 @@ It’s incredibly easy to switch panes in tmux, hit the up arrow and enter (assu
 
 I firmly believe in taking breaks from your work. It can help you form new ideas and approach existing problems with new perspectives. In my experience, though, these kinds of micro-breaks are not helpful when taken mid-problem solving. They merely serve as distractions causing you to lose your hard-earned mental state.
 
-##Solving Your Problems
+## Solving Your Problems
 
 In addition to the effect this has on your mental state and how you approach problems, it suffers from the same problems as before: wasted time and keystrokes. I have a few custom tmux bindings, but even with those in place it’s eight keystrokes and a hand shift off home row to leave Vim, run my tests, and get back into Vim. Think of how many times in your career you should be running tests—the answer is a lot. Now think of the productivity you could gain by reducing this one thing you do multiple times per day by 75%. How much more often would you run those tests? How many more ideas would you experiment with?  How much faster would you finish a feature if running your tests was an instantaneous, mindless reflex instead of a conscious mental activity?
 
