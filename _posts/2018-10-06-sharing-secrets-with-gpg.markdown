@@ -2,7 +2,7 @@
 layout: post
 title: "Sharing Secrets with GPG"
 authors: ["aaron-lahey"]
-date: 2018-09-21
+date: 2018-10-06
 tags: ["Coding", "Tools"]
 ---
 
